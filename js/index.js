@@ -1,5 +1,4 @@
 
-    let btnPeticion = document.getElementById("btnPedir");
     window.addEventListener('DOMContentLoaded', pedirDatos);
     let divRes = document.getElementById("res");
     
