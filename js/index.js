@@ -1,6 +1,8 @@
 
     window.addEventListener('DOMContentLoaded', pedirDatos);
     let divRes = document.getElementById("res");
+    let searchValue = document.getElementById("searchValue");
+    let btnSearch = document.getElementById("btn-search");
     
     function mostrarDatos(datosIn){
         let textoRes = "";
