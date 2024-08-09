@@ -36,14 +36,20 @@ function construirDatos(datosIn) {
 function imprimirDatos(data) {
     divRes.innerHTML = data;
 }
-
 // Agrega un evento al botón de búsqueda
 btnSearch.addEventListener('click', () => {
+    // Obtiene el término de búsqueda del campo de entrada, lo convierte a minúsculas y elimina espacios al inicio y al final
     let searchTerm = searchValue.value.toLowerCase().trim();
+
+    // Verifica si hay un término de búsqueda ingresado
     if (searchTerm) {
+        // Filtra el array allPokemonData para encontrar los Pokémon cuyos nombres incluyen el término de búsqueda
         let filteredData = allPokemonData.filter(pokemon => pokemon.name.includes(searchTerm));
+        
+        // Construye las tarjetas solo para los Pokémon filtrados
         construirDatos(filteredData);
     } else {
-        construirDatos(allPokemonData); // Muestra todos si no hay término de búsqueda
+        // Si no hay término de búsqueda, muestra todos los Pokémon
+        construirDatos(allPokemonData);
     }
 });
